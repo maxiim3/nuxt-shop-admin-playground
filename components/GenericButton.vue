@@ -1,11 +1,22 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  $END$
+  <button
+      :class="`${classes || '' } border-none min-w-4 min-h-4 bg-slate-300 hover:bg-slate-400 transition-all duration-75 `
+        .concat(variant === 'sm' ? 'p-1 ' : 'px-3 py-2 ')
+        .concat(round ? 'rounded-full ': 'rounded-md ' )
+"
+  >
+    <slot/>
+  </button>
 </template>
 
-<style scoped lang="scss">
+<script setup lang="ts">
+type Props = {
+  variant ?: "sm" | "md"
+  round?: boolean
+  classes?: string
+}
 
-</style>
+defineProps<Props>()
+
+
+</script>

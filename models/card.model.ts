@@ -1,7 +1,7 @@
-import type {ProductModel} from "~/products.model";
+import type {ProductModel} from "~/models/products.model";
 
 export interface CardModel {
-    products: ProductModel[]
+    product: ProductModel
     quantity: number
 }
 

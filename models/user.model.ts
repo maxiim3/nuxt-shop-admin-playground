@@ -1,7 +1,13 @@
-import type {ProductModel} from "~/models/products.model";
 
-export interface CardModel {
-    product: ProductModel
-    quantity: number
+export enum Privilege {
+    customer,
+    admin
+}
+export interface UserModel {
+    id: string
+    name: string
+    email: string
+    hashedPW: string
+    type: Privilege
 }
 
